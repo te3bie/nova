@@ -1,0 +1,541 @@
+.nova-launch {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  min-height: 100dvh;
+  overflow: hidden;
+  color: #fff;
+  background: radial-gradient(
+    ellipse at 20% 70%,
+    #45b8f4 0%,
+    #259ce9 28%,
+    #1769ed 73%,
+    #184bd0 100%
+  );
+  display: flex;
+  flex-direction: column;
+  padding: 30px 46px;
+  isolation: isolate;
+}
+.nova-launch::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(circle at 65% 32%, #adfaff1b, transparent 45%);
+  pointer-events: none;
+}
+.nova-launch-header,
+.nova-launch-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+}
+.nova-launch-word {
+  font-size: 8px;
+  letter-spacing: 1.8px;
+  font-weight: 650;
+  color: #d7efffb8;
+}
+.nova-launch-skip {
+  border: 1px solid #ffffff35;
+  border-radius: 30px;
+  background: #ffffff12;
+  color: #e9f7ff;
+  padding: 10px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  min-height: 39px;
+}
+.nova-launch-skip:hover {
+  background: #ffffff24;
+}
+.nova-launch-skip:focus-visible,
+.nova-launch-play:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 6px;
+}
+.nova-launch-content {
+  margin: auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 0 42px;
+}
+.nova-launch-brand {
+  color: #fff;
+}
+.nova-launch-brand .wordmark {
+  font-size: 72px;
+  letter-spacing: -5px;
+  color: #fff;
+  filter: drop-shadow(0 5px 13px #04539122);
+}
+.nova-launch-brand .wordmark svg {
+  width: 64px;
+  height: 72px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.nova-launch-brand .wordmark img {
+  width: 255px;
+  height: auto;
+}
+.nova-launch-tagline {
+  font-size: 11px;
+  letter-spacing: 0.7px;
+  color: #e1f3ff;
+  margin: 17px 0 0;
+}
+.nova-launch-play {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #d5f2ff;
+  background: transparent;
+  padding: 0;
+  margin: 7px 0 23px;
+  border-radius: 20px;
+  position: relative;
+}
+.nova-launch-stage {
+  overflow: hidden;
+  width: 304px;
+  height: 247px;
+  display: block;
+  position: relative;
+  isolation: isolate;
+}
+.nova-launch-halo {
+  position: absolute;
+  width: 224px;
+  height: 224px;
+  left: 42px;
+  bottom: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    #9eeaff21 0%,
+    #98ecff0a 60%,
+    transparent 70%
+  );
+}
+.nova-launch-ground {
+  position: absolute;
+  bottom: 8px;
+  left: 48px;
+  width: 216px;
+  height: 33px;
+  background: #063d9b25;
+  filter: blur(2px);
+  border-radius: 50%;
+  transform: rotate(-1deg);
+  animation: nova-launch-shadow 2.15s ease-in-out infinite;
+}
+.nova-launch-block {
+  position: absolute;
+  display: block;
+  width: 76px;
+  height: 84px;
+  z-index: 2;
+  transform-origin: 50% 86%;
+  animation: nova-launch-build 2.15s cubic-bezier(0.3, 0.72, 0.35, 1) infinite;
+  animation-delay: var(--block-delay);
+  animation-fill-mode: both;
+  will-change: transform, opacity;
+}
+.nova-launch-block:nth-of-type(6),
+.nova-launch-block:nth-of-type(7) {
+  z-index: 3;
+}
+.nova-launch-block:nth-of-type(8) {
+  z-index: 4;
+}
+.nova-launch-block svg,
+.nova-launch-drop svg {
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 4px 4px #08448716);
+}
+.launch-cube-left.sky {
+  fill: #70d2ff;
+}
+.launch-cube-right.sky {
+  fill: #2b9eea;
+}
+.launch-cube-top.sky {
+  fill: #a4e4ff;
+}
+.launch-cube-left.blue {
+  fill: #588cf2;
+}
+.launch-cube-right.blue {
+  fill: #3970d7;
+}
+.launch-cube-top.blue {
+  fill: #88b4ff;
+}
+.launch-cube-left.aqua {
+  fill: #66d8de;
+}
+.launch-cube-right.aqua {
+  fill: #30aabf;
+}
+.launch-cube-top.aqua {
+  fill: #a1eff1;
+}
+.launch-cube-left.ice {
+  fill: #c4eaff;
+}
+.launch-cube-right.ice {
+  fill: #8ecdf5;
+}
+.launch-cube-top.ice {
+  fill: #f1fbff;
+}
+.launch-cube-left.gold {
+  fill: #ffd374;
+}
+.launch-cube-right.gold {
+  fill: #eead3f;
+}
+.launch-cube-top.gold {
+  fill: #ffe8a9;
+}
+.nova-launch-drop {
+  position: absolute;
+  bottom: 30px;
+  width: 69px;
+  height: 76px;
+  z-index: 6;
+  pointer-events: none;
+  animation: nova-launch-freefall 1.25s cubic-bezier(0.3, 0.67, 0.39, 1) both;
+}
+.nova-launch-spark {
+  position: absolute;
+  z-index: 0;
+  font-family: Georgia, serif;
+  pointer-events: none;
+  opacity: 0.7;
+}
+.nova-launch-spark.spark-one {
+  left: 38px;
+  top: 95px;
+  font-size: 21px;
+  color: #b6f0ff;
+  animation: nova-launch-twinkle 2s ease-in-out infinite;
+}
+.nova-launch-spark.spark-two {
+  right: 27px;
+  top: 47px;
+  font-size: 31px;
+  color: #e3f9ff;
+  animation: nova-launch-twinkle 2s ease-in-out 0.5s infinite;
+}
+.nova-launch-spark.spark-three {
+  right: 56px;
+  bottom: 53px;
+  font-size: 12px;
+  color: #ffe9b2;
+}
+.nova-launch-play-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 9px;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+  color: #d0efffc7;
+}
+.nova-launch-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-size: 12px;
+  color: #f1faff;
+  font-weight: 550;
+}
+.nova-launch-status-dot {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background: #a0edff;
+  box-shadow: 0 0 0 4px #adf3ff17;
+  animation: nova-launch-twinkle 1.5s ease-in-out infinite;
+}
+.nova-launch-note {
+  margin: 10px 0 0;
+  font-size: 10px;
+  line-height: 1.7;
+  color: #d0ecffa6;
+}
+.nova-launch-footer {
+  font-size: 9px;
+  color: #cae9ffb5;
+}
+.nova-launch-footer > span:first-child {
+  font-size: 7px;
+  letter-spacing: 2px;
+}
+.nova-launch-orbit {
+  position: absolute;
+  width: 1080px;
+  height: 500px;
+  border: 1px solid #a6eeff24;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(-22deg);
+  pointer-events: none;
+  z-index: -1;
+}
+.nova-launch-orbit-two {
+  width: 1190px;
+  height: 615px;
+  border-color: #a6eeff15;
+}
+@keyframes nova-launch-build {
+  0% {
+    transform: translate3d(0, -190px, 0) rotate(-11deg);
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  20% {
+    transform: translate3d(0, 0, 0) rotate(0);
+    opacity: 1;
+  }
+  24% {
+    transform: translate3d(0, -7px, 0) rotate(2deg);
+  }
+  29%,
+  58% {
+    transform: translate3d(0, 0, 0) rotate(0);
+    opacity: 1;
+  }
+  64% {
+    transform: translate3d(1px, -3px, 0) rotate(3deg);
+  }
+  81% {
+    transform: translate3d(var(--block-fall), 57px, 0) rotate(var(--block-turn));
+    opacity: 1;
+  }
+  96%,
+  100% {
+    transform: translate3d(var(--block-fall), 160px, 0)
+      rotate(var(--block-turn));
+    opacity: 0;
+  }
+}
+@keyframes nova-launch-freefall {
+  0% {
+    transform: translate(0, -230px) rotate(-15deg);
+    opacity: 0;
+  }
+  7% {
+    opacity: 1;
+  }
+  48% {
+    transform: translate(0, 0) rotate(4deg);
+    opacity: 1;
+  }
+  62% {
+    transform: translate(10px, -30px) rotate(15deg);
+  }
+  80% {
+    transform: translate(var(--drop-drift), 20px) rotate(var(--drop-turn));
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--drop-drift), 90px) rotate(var(--drop-turn));
+    opacity: 0;
+  }
+}
+@keyframes nova-launch-shadow {
+  0%,
+  100% {
+    transform: scale(0.7);
+    opacity: 0.3;
+  }
+  30%,
+  60% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  85% {
+    transform: scale(1.2);
+    opacity: 0.2;
+  }
+}
+@keyframes nova-launch-twinkle {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.nova-launch-gentle .nova-launch-block {
+  animation: none;
+  opacity: 1;
+  transform: none;
+}
+.nova-launch-gentle .nova-launch-drop {
+  animation: none;
+  opacity: 1;
+  transform: translate(0, -140px);
+}
+.nova-launch-gentle .nova-launch-ground,
+.nova-launch-gentle .nova-launch-spark,
+.nova-launch-gentle .nova-launch-status-dot {
+  animation: none;
+}
+@media (max-width: 600px) {
+  .nova-launch {
+    padding: 22px 22px calc(24px + env(safe-area-inset-bottom));
+  }
+  .nova-launch-word {
+    font-size: 6px;
+    letter-spacing: 1.2px;
+    max-width: 145px;
+    line-height: 1.8;
+  }
+  .nova-launch-skip {
+    font-size: 10px;
+    padding: 8px 12px;
+  }
+  .nova-launch-content {
+    padding: 28px 0 35px;
+  }
+  .nova-launch-brand .wordmark {
+    font-size: 66px;
+  }
+  .nova-launch-brand .wordmark svg {
+    width: 58px;
+    height: 66px;
+  }
+  .nova-launch-brand .wordmark img {
+    width: 235px;
+  }
+  .nova-launch-tagline {
+    font-size: 10px;
+    letter-spacing: 0.3px;
+  }
+  .nova-launch-stage {
+    overflow: hidden;
+    height: 237px;
+  }
+  .nova-launch-status {
+    font-size: 11px;
+  }
+  .nova-launch-note {
+    font-size: 9px;
+  }
+  .nova-launch-footer > span:last-child {
+    font-size: 8px;
+  }
+  .nova-launch-footer > span:first-child {
+    font-size: 6px;
+    letter-spacing: 1.5px;
+  }
+}
+@media (max-height: 650px) {
+  .nova-launch {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  .nova-launch-content {
+    padding: 8px 0 16px;
+  }
+  .nova-launch-stage {
+    overflow: hidden;
+    height: 196px;
+    transform: scale(0.84);
+    transform-origin: center bottom;
+    margin-top: -20px;
+  }
+  .nova-launch-brand .wordmark {
+    font-size: 52px;
+  }
+  .nova-launch-brand .wordmark svg {
+    width: 46px;
+    height: 52px;
+  }
+  .nova-launch-brand .wordmark img {
+    width: 190px;
+  }
+  .nova-launch-tagline {
+    margin-top: 10px;
+    font-size: 9px;
+  }
+  .nova-launch-play {
+    margin-bottom: 13px;
+  }
+  .nova-launch-note {
+    margin-top: 7px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nova-launch-block {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .nova-launch-drop {
+    animation: none;
+    opacity: 1;
+    transform: translate(0, -140px);
+  }
+  .nova-launch-ground,
+  .nova-launch-spark,
+  .nova-launch-status-dot {
+    animation: none;
+  }
+}
+
+@media (max-height: 500px) {
+  .nova-launch-content {
+    padding: 0;
+  }
+  .nova-launch-stage {
+    overflow: hidden;
+    height: 155px;
+    transform: scale(0.65);
+    margin-top: -40px;
+  }
+  .nova-launch-brand .wordmark {
+    font-size: 42px;
+  }
+  .nova-launch-brand .wordmark svg {
+    width: 37px;
+    height: 42px;
+  }
+  .nova-launch-brand .wordmark img {
+    width: 155px;
+  }
+  .nova-launch-play {
+    margin-top: 0;
+    margin-bottom: 9px;
+  }
+  .nova-launch-tagline {
+    margin-top: 6px;
+  }
+  .nova-launch-note {
+    display: none;
+  }
+  .nova-launch-footer {
+    display: none;
+  }
+}

@@ -1,0 +1,1126 @@
+.simulator-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.simulator-page h2 {
+  font-size: 23px;
+  letter-spacing: -0.65px;
+  line-height: 1.25;
+  margin: 10px 0;
+}
+.simulator-page h3 {
+  font-size: 16px;
+  margin: 5px 0 9px;
+}
+.simulator-page p {
+  line-height: 1.65;
+}
+.sim-tabs {
+  display: flex;
+  gap: 8px;
+  width: fit-content;
+  padding: 5px;
+  background: #e9f0f7;
+  border: 1px solid #dfe8f2;
+  border-radius: 14px;
+}
+.sim-tabs button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 0;
+  background: transparent;
+  color: #64778e;
+  padding: 13px 20px;
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+.sim-tabs button.active {
+  background: #fff;
+  box-shadow: 0 2px 7px #194d8310;
+  color: #215ed3;
+}
+.sim-wallet {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 30px;
+  padding: 28px;
+  background: linear-gradient(120deg, #f2faff, #fff);
+}
+.sim-wallet p {
+  max-width: 570px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.sim-wallet-total {
+  padding: 8px 0 0 24px;
+  border-left: 1px solid #dce9f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+.sim-wallet-total > span {
+  font-size: 12px;
+  color: #6c7f96;
+}
+.sim-wallet-total strong {
+  font-size: 36px;
+  letter-spacing: -1.4px;
+  white-space: nowrap;
+}
+.sim-wallet-total strong span {
+  font-size: 25px;
+  color: #dfa92e;
+}
+.sim-wallet-total small {
+  line-height: 1.6;
+  font-size: 11px;
+}
+.sim-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+.sim-metrics > .card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.sim-metrics svg {
+  color: #5883c5;
+  margin-bottom: 4px;
+}
+.sim-metrics span {
+  font-size: 12px;
+  color: #78879d;
+}
+.sim-metrics strong {
+  font-size: 23px;
+  letter-spacing: -0.7px;
+}
+.sim-metrics small {
+  font-size: 15px;
+  color: #d5a33e;
+}
+.sim-positive {
+  color: #168774;
+}
+.sim-negative {
+  color: #c45050;
+}
+.sim-market > p {
+  margin-top: 0;
+}
+.sim-chart-legend {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 20px 0 6px;
+}
+.sim-chart-legend button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 12px;
+  border: 1px solid #e3eaf3;
+  background: #fff;
+  border-radius: 9px;
+  color: #2c405e;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.sim-chart-legend button[aria-pressed="false"] {
+  background: #f5f7fa;
+  color: #8995a5;
+}
+.sim-chart-legend button .muted {
+  font-size: 10px;
+}
+.sim-legend-symbol {
+  width: 9px;
+  height: 9px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.sim-legend-symbol.circle {
+  border-radius: 50%;
+}
+.sim-legend-symbol.triangle {
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+.sim-chart {
+  display: block;
+  width: 100%;
+  overflow: visible;
+  margin: 10px 0;
+}
+.sim-chart-empty {
+  padding: 10px;
+  text-align: center;
+  background: #eff7ff;
+  border-radius: 8px;
+  color: #557294;
+}
+.sim-day-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 3%;
+  gap: 7px;
+}
+.sim-day-buttons button {
+  border: 0;
+  background: transparent;
+  padding: 8px 13px;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 12px;
+  color: #637b98;
+  cursor: pointer;
+}
+.sim-day-buttons button.active {
+  background: #eaf2ff;
+  color: #2362da;
+  font-weight: 750;
+}
+.sim-selected {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  padding: 13px;
+  margin: 12px 0 0;
+  background: #f7fafe;
+  border: 1px solid #e7eef6;
+  border-radius: 9px;
+  flex-wrap: wrap;
+}
+.sim-selected > span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #6c7f98;
+}
+.sim-selected b {
+  color: #24405e;
+  font-size: 11px;
+}
+.sim-selected svg {
+  width: 14px;
+}
+.sim-chart-actions {
+  margin-top: 16px;
+}
+.sim-stock-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.sim-stock-card h3 {
+  margin: 0;
+}
+.sim-ticker-avatar {
+  width: 39px;
+  height: 39px;
+  display: grid;
+  place-items: center;
+  font-size: 23px;
+  font-weight: 800;
+  border-radius: 11px;
+}
+.sim-stock-price {
+  display: block;
+  font-size: 28px;
+  letter-spacing: -0.9px;
+  margin: 22px 0 6px;
+}
+.sim-stock-price small {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: #8290a3;
+}
+.sim-stock-card p {
+  font-size: 10px;
+  line-height: 1.6;
+  min-height: 32px;
+}
+.sim-stock-controls {
+  display: flex;
+  gap: 8px;
+  margin-top: 17px;
+}
+.sim-stock-controls .btn {
+  flex: 1;
+  min-height: 37px;
+  padding: 8px;
+  font-size: 12px;
+}
+.sim-news {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: #f2f8ff !important;
+}
+.sim-news-icon {
+  background: #e1eeff;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  color: #3471cc;
+}
+.sim-news h3 {
+  margin: 12px 0 0;
+}
+.sim-news p {
+  margin: 8px 0;
+  font-size: 13px;
+  color: #62758f;
+}
+.sim-news details {
+  margin-top: 13px;
+  font-size: 12px;
+  color: #3866a3;
+}
+.sim-news summary {
+  cursor: pointer;
+}
+.sim-challenge {
+  background: linear-gradient(115deg, #f0f6ff, #fff8e9) !important;
+}
+.sim-challenge > p {
+  font-size: 13px;
+  max-width: 900px;
+}
+.sim-challenge > .row > svg {
+  color: #c8a451;
+}
+.sim-assumptions {
+  display: flex;
+  gap: 30px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+.sim-assumptions > span {
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  color: #71809a;
+  gap: 4px;
+}
+.sim-assumptions strong {
+  font-size: 27px;
+  letter-spacing: -0.8px;
+  color: #27496f;
+}
+.sim-unlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-top: 14px;
+  border-top: 1px solid #dfe7f3;
+}
+.sim-unlock > span {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+  color: #687c96;
+}
+.sim-unlock > span svg {
+  flex-shrink: 0;
+  color: #d09b2e;
+}
+.sim-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+}
+.sim-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 12px;
+  min-width: 520px;
+}
+.sim-table caption {
+  text-align: left;
+  font-size: 11px;
+  color: #8292a6;
+  padding: 0 0 12px;
+}
+.sim-table th {
+  font-weight: 650;
+  color: #58718f;
+  white-space: nowrap;
+}
+.sim-table td,
+.sim-table th {
+  padding: 13px 11px;
+  border-bottom: 1px solid #e8edf4;
+}
+.sim-table thead {
+  background: #f7faff;
+}
+.sim-table tbody th {
+  color: #334f70;
+}
+.sim-ledger-summary {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  font-size: 11px;
+  color: #7d8da3;
+  margin-bottom: 25px;
+}
+.sim-ledger-summary b {
+  color: #38516e;
+  font-weight: 650;
+  margin-left: 6px;
+}
+.sim-trade-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.sim-end {
+  text-align: center;
+  background: #fffaf0 !important;
+}
+.sim-end > svg {
+  color: #dba734;
+  margin: auto;
+}
+.sim-end p {
+  font-size: 13px;
+}
+.sim-source {
+  padding: 0 10px;
+  font-size: 10px !important;
+  line-height: 1.7 !important;
+  color: #8b99ac !important;
+}
+.sim-order-details {
+  margin: 12px 0;
+  border-top: 1px solid #e5edf5;
+}
+.sim-order-details > div {
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #e5edf5;
+  font-size: 12px;
+}
+.sim-order-details dt {
+  color: #71829a;
+}
+.sim-order-details dd {
+  margin: 0;
+  font-weight: 700;
+  text-align: right;
+}
+.sim-error {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  color: #b24747;
+  background: #fff0ee;
+  border: 1px solid #f1c8c1;
+  border-radius: 10px;
+  padding: 13px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.sim-error svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.sim-options {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.sim-options legend {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0 0 12px;
+}
+.sim-options label {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 13px;
+  background: #f6f9fd;
+  border: 1px solid #e2eaf5;
+  border-radius: 9px;
+  margin: 6px 0;
+  font-size: 13px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.sim-options input {
+  accent-color: #2164db;
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.sim-reflect-medal {
+  display: grid;
+  place-items: center;
+  width: 83px;
+  height: 83px;
+  background: #fff2ca;
+  border-radius: 50%;
+  color: #c79727;
+  margin: 5px auto;
+}
+.sim-account-intro {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+  background: linear-gradient(100deg, #eff8ff, #fff) !important;
+}
+.account-guide {
+  height: 170px;
+  width: 155px;
+  flex-shrink: 0;
+  align-self: flex-end;
+  margin-bottom: -27px;
+}
+.sim-account-intro p {
+  font-size: 13px;
+  max-width: 670px;
+}
+.sim-hint {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #eaf3ff;
+  border: 1px solid #d9e7fa;
+  padding: 12px 15px;
+  border-radius: 9px;
+  font-size: 12px !important;
+  color: #48688e;
+  line-height: 1.6;
+}
+.sim-hint svg {
+  color: #3f78cb;
+  flex-shrink: 0;
+}
+.sim-scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 9px;
+  margin: 20px 0;
+}
+.sim-scenario-grid button {
+  font: inherit;
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  border: 1px solid #dfe8f3;
+  border-radius: 11px;
+  padding: 14px;
+  background: #fff;
+  color: #57708e;
+  min-height: 102px;
+  cursor: pointer;
+}
+.sim-scenario-grid button.active {
+  background: #eff6ff;
+  border-color: #7ea9e9;
+  color: #225eca;
+  box-shadow: inset 0 0 0 1px #7ea9e9;
+}
+.sim-scenario-grid button > svg {
+  width: 16px;
+  height: 16px;
+}
+.sim-scenario-description {
+  padding: 18px 20px;
+  background: #f7faff;
+  border-radius: 10px;
+  border: 1px solid #e7eef7;
+}
+.sim-scenario-description h3 {
+  margin: 0;
+}
+.sim-scenario-description p {
+  margin: 8px 0;
+  font-size: 13px;
+}
+.sim-account-choices {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+.sim-account-choices > button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 11px;
+  padding: 20px 10px !important;
+  cursor: pointer;
+  font: inherit;
+  text-align: center;
+  color: #60758e;
+  min-height: 164px;
+}
+.sim-account-choices > button.active {
+  border-color: #5289db;
+  box-shadow: inset 0 0 0 1px #5289db;
+  background: #f1f7ff;
+}
+.sim-account-choices b {
+  font-size: 12px;
+  color: #29496e;
+}
+.sim-account-choices small {
+  font-size: 10px;
+  line-height: 1.5;
+}
+.sim-account-icon {
+  display: grid;
+  place-items: center;
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  background: #eaf2ff;
+  color: #427acb;
+}
+.sim-account-check {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  color: #2c6ad1;
+}
+.sim-account-detail > .row > svg {
+  color: #3b75c7;
+}
+.sim-account-detail > p {
+  font-size: 14px;
+  color: #677e98;
+  max-width: 760px;
+}
+.sim-account-info {
+  padding: 19px;
+  background: #f5f9fe;
+  border: 1px solid #e5edf7;
+  border-radius: 12px;
+}
+.sim-account-info h3 {
+  font-size: 12px;
+  margin: 0 0 6px;
+  color: #355c88;
+}
+.sim-account-info h3:not(:first-child) {
+  margin-top: 20px;
+}
+.sim-account-info p {
+  font-size: 12px;
+  margin: 0;
+  color: #71849b;
+}
+.sim-account-detail > .btn {
+  margin-top: 20px;
+}
+.sim-account-feedback {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+}
+.sim-account-feedback.correct {
+  background: #eaf8f1;
+  border: 1px solid #cde7d9;
+  color: #2a7f61;
+}
+.sim-account-feedback.review {
+  background: #fff7e9;
+  border: 1px solid #efdfbd;
+  color: #a78137;
+}
+.sim-account-feedback > svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.sim-account-feedback p {
+  font-size: 12px;
+  color: #617b77;
+}
+.sim-account-feedback h3 {
+  margin: 0;
+}
+.sim-account-feedback .btn {
+  margin-top: 2px;
+}
+.sim-compare-select {
+  max-width: 300px;
+  margin-top: 15px;
+}
+.sim-compare th:not(:first-child),
+.sim-compare td {
+  width: 39%;
+  white-space: normal;
+  vertical-align: top;
+  line-height: 1.7;
+}
+.sim-compare th:first-child {
+  width: 22%;
+}
+.sim-jurisdiction {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #edf4fc;
+  border-radius: 12px;
+  padding: 20px;
+  color: #6b829c;
+}
+.sim-jurisdiction > svg {
+  flex-shrink: 0;
+  color: #4e7ebb;
+  margin-top: 3px;
+}
+.sim-jurisdiction p {
+  font-size: 11px;
+  margin: 0;
+}
+.simulator-page button:focus-visible,
+.simulator-page input:focus-visible,
+.simulator-page select:focus-visible,
+.simulator-page summary:focus-visible {
+  outline: 3px solid #e4ad34;
+  outline-offset: 4px;
+}
+@media (min-width: 1200px) {
+  .sim-stock-card {
+    padding: 23px !important;
+  }
+  .simulator-page h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 800px) {
+  .sim-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sim-wallet {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .sim-wallet-total {
+    border-left: 0;
+    border-top: 1px solid #deebf7;
+    padding: 18px 0 0;
+  }
+  .sim-wallet-total strong {
+    font-size: 32px;
+  }
+  .sim-stock-grid {
+    gap: 11px;
+  }
+  .sim-stock-card {
+    padding: 15px !important;
+  }
+  .sim-stock-card > .row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .sim-stock-price {
+    font-size: 24px;
+    margin-top: 17px;
+  }
+  .sim-scenario-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .sim-account-choices {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .sim-unlock {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 13px;
+  }
+  .sim-unlock .btn {
+    width: 100%;
+  }
+  .sim-table {
+    font-size: 11px;
+  }
+  .sim-chart-legend button {
+    font-size: 11px;
+  }
+  .sim-chart-legend button .muted {
+    display: none;
+  }
+}
+@media (max-width: 540px) {
+  .simulator-page {
+    gap: 18px;
+  }
+  .simulator-page h2 {
+    font-size: 20px;
+  }
+  .sim-tabs {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .sim-tabs button {
+    flex: 1;
+    font-size: 11px;
+    padding: 11px 10px;
+    gap: 6px;
+  }
+  .sim-tabs svg {
+    width: 17px;
+  }
+  .sim-wallet {
+    padding: 20px;
+  }
+  .sim-wallet .row {
+    flex-wrap: wrap;
+  }
+  .sim-wallet .small {
+    font-size: 10px;
+  }
+  .sim-wallet h2 {
+    font-size: 23px;
+    max-width: 270px;
+  }
+  .sim-wallet-total {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 10px;
+  }
+  .sim-wallet-total > span {
+    grid-column: 1/-1;
+  }
+  .sim-wallet-total strong {
+    font-size: 27px;
+  }
+  .sim-wallet-total small {
+    font-size: 10px;
+    align-self: center;
+  }
+  .sim-metrics {
+    gap: 10px;
+  }
+  .sim-metrics > .card {
+    padding: 15px;
+    gap: 6px;
+  }
+  .sim-metrics span {
+    font-size: 10px;
+  }
+  .sim-metrics strong {
+    font-size: 21px;
+  }
+  .sim-metrics small {
+    font-size: 13px;
+  }
+  .sim-market .row:first-child {
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .sim-market .row:first-child h2 {
+    font-size: 18px;
+    max-width: 180px;
+  }
+  .sim-market > .small {
+    font-size: 10px;
+  }
+  .sim-chart {
+    margin: 18px 0 10px;
+    min-height: 140px;
+  }
+  .sim-chart-legend {
+    gap: 5px;
+  }
+  .sim-chart-legend button {
+    padding: 8px;
+    font-size: 10px;
+  }
+  .sim-day-buttons {
+    gap: 0;
+    margin: 0;
+  }
+  .sim-day-buttons button {
+    font-size: 10px;
+    padding: 8px 10px;
+  }
+  .sim-selected {
+    gap: 9px 12px;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+  .sim-selected > span:first-child {
+    width: 100%;
+  }
+  .sim-selected > span {
+    font-size: 9px;
+  }
+  .sim-selected b {
+    font-size: 10px;
+  }
+  .sim-chart-actions {
+    align-items: stretch !important;
+    gap: 10px;
+    flex-direction: column-reverse;
+  }
+  .sim-chart-actions .btn {
+    justify-content: center;
+    min-height: 42px;
+    font-size: 12px;
+  }
+  .sim-stock-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .sim-stock-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 12px;
+    padding: 18px !important;
+  }
+  .sim-stock-card > .row {
+    grid-row: span 2;
+    gap: 9px;
+  }
+  .sim-stock-card .sim-ticker-avatar {
+    width: 35px;
+    height: 35px;
+    font-size: 21px;
+  }
+  .sim-stock-card h3 {
+    font-size: 14px;
+  }
+  .sim-stock-price {
+    margin: 0;
+    font-size: 25px;
+    align-self: start;
+  }
+  .sim-stock-price small {
+    font-size: 9px;
+  }
+  .sim-stock-card > span {
+    font-size: 9px;
+  }
+  .sim-stock-card p {
+    grid-column: 1/-1;
+    margin: 10px 0 0;
+    min-height: 0;
+    font-size: 9px;
+  }
+  .sim-stock-controls {
+    grid-column: 1/-1;
+    margin-top: 9px;
+  }
+  .sim-stock-controls .btn {
+    min-height: 39px;
+  }
+  .sim-news {
+    gap: 12px;
+  }
+  .sim-news-icon {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+    border-radius: 9px;
+  }
+  .sim-news-icon svg {
+    width: 19px;
+  }
+  .sim-news .row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .sim-news h3 {
+    font-size: 14px;
+  }
+  .sim-news p {
+    font-size: 11px;
+  }
+  .sim-assumptions {
+    gap: 14px;
+    justify-content: space-between;
+  }
+  .sim-assumptions > span {
+    font-size: 9px;
+    max-width: 85px;
+    line-height: 1.5;
+  }
+  .sim-assumptions strong {
+    font-size: 25px;
+  }
+  .sim-challenge > p {
+    font-size: 11px;
+  }
+  .sim-ledger-summary {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .sim-trade-buttons .btn {
+    flex: 1;
+    font-size: 11px;
+    padding: 11px 9px;
+  }
+  .simulator-page > .card > .row > h2 {
+    font-size: 18px;
+  }
+  .simulator-page > .card > .row > .btn {
+    font-size: 10px;
+    padding: 7px;
+  }
+  .sim-account-intro {
+    gap: 11px;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  .account-guide {
+    height: 125px;
+    width: 95px;
+    margin-left: -13px;
+    align-self: flex-end;
+    flex-shrink: 0;
+  }
+  .sim-account-intro h2 {
+    font-size: 19px;
+  }
+  .sim-account-intro p {
+    font-size: 11px;
+  }
+  .sim-account-intro .sim-hint {
+    font-size: 10px !important;
+    align-items: flex-start;
+    padding: 9px;
+  }
+  .sim-account-intro .sim-hint svg {
+    width: 15px;
+  }
+  .sim-account-intro .badge {
+    font-size: 8px;
+  }
+  .sim-scenario-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .sim-scenario-grid button {
+    min-height: 80px;
+    font-size: 10px;
+    padding: 11px;
+  }
+  .sim-scenario-grid button:last-child {
+    grid-column: 1/-1;
+    min-height: 60px;
+    flex-direction: row;
+    align-items: center;
+  }
+  .sim-scenario-description {
+    padding: 14px;
+  }
+  .sim-scenario-description p {
+    font-size: 11px;
+  }
+  .sim-scenario-description .small {
+    font-size: 10px;
+  }
+  .sim-account-choices {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .sim-account-choices > button {
+    min-height: 145px;
+    padding: 15px 12px !important;
+    gap: 9px;
+  }
+  .sim-account-choices > button:last-child {
+    grid-column: 1/-1;
+    min-height: 105px;
+    display: grid;
+    grid-template-columns: 53px 1fr;
+    text-align: left;
+    align-content: center;
+    justify-items: start;
+    gap: 6px 15px;
+    padding-left: 22px !important;
+  }
+  .sim-account-choices > button:last-child .sim-account-icon {
+    grid-row: span 2;
+  }
+  .sim-account-choices b {
+    font-size: 12px;
+  }
+  .sim-account-choices small {
+    font-size: 10px;
+  }
+  .sim-account-choices > button:last-child .sim-account-check {
+    position: absolute;
+    right: 13px;
+    top: 13px;
+  }
+  .sim-account-detail .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .sim-account-detail > p {
+    font-size: 12px;
+  }
+  .sim-account-info {
+    padding: 15px;
+  }
+  .sim-account-detail > .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .sim-account-feedback {
+    padding: 15px;
+    gap: 10px;
+  }
+  .sim-account-feedback > svg {
+    width: 21px;
+  }
+  .sim-account-feedback h3 {
+    font-size: 14px;
+  }
+  .sim-account-feedback p {
+    font-size: 11px;
+  }
+  .sim-account-feedback .btn {
+    font-size: 11px;
+    padding: 8px 0;
+  }
+  .sim-jurisdiction {
+    padding: 16px;
+    gap: 10px;
+  }
+  .sim-jurisdiction p {
+    font-size: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .simulator-page * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
