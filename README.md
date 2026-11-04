@@ -14,11 +14,11 @@ NOVA is an interactive financial-literacy app prototype for Canadian high school
 
 ---
 
-## Why we made NOVA
+## Why NOVA was made
 
-Understanding money should feel approachable. We created NOVA to help students take their first steps with investing, risk, and financial decision-making through explanations they can understand and decisions they can practise.
+Understanding money should feel approachable. NOVA was created to help students take their first steps with investing, risk, and financial decision-making through explanations they can understand and decisions they can practise.
 
-Our idea began with three challenges: knowing where to start, finding beginner-friendly tools, and making sense of financial advice on social media. NOVA brings lessons, hands-on simulations, and media-literacy activities into one learning space.
+The idea began with three challenges: knowing where to start, finding beginner-friendly tools, and making sense of financial advice on social media. NOVA brings lessons, hands-on simulations, and media-literacy activities into one learning space.
 
 Whether someone is saving for a first car, thinking about university expenses, or simply curious about stocks, NOVA gives that curiosity a starting point. It also gives teachers a practical way to bring financial-literacy discussions into business and economics classrooms.
 
