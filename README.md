@@ -4,6 +4,8 @@
 
 ## [✦ OPEN NOVA — TRY THE APP →](https://te3bie.github.io/nova-app/)
 
+*The public link becomes available after the GitHub Pages deployment is enabled.*
+
 **Learn the money stuff. Try it for yourself. Build confidence, one small win at a time.**
 
 NOVA is an interactive financial-literacy app prototype for Canadian high school students ages 14–18. Explore investing, practise financial decisions, and learn to question online money claims in a welcoming space built for beginners.
@@ -106,6 +108,15 @@ npm run test:e2e    # browser flows; dev server on 5173 and Google Chrome requir
 ```
 
 The browser tests use an isolated Chrome profile. The last report is available in `playwright-report/index.html`.
+
+### Publish the public demo
+
+1. Push this repository to GitHub.
+2. Open **Settings → Pages** and set **Source** to **GitHub Actions**.
+3. In **Actions**, run **Deploy NOVA to GitHub Pages** if a deployment has not started automatically.
+4. After the workflow succeeds, open **https://te3bie.github.io/nova-app/**.
+
+The workflow builds the app for its repository path and publishes only the `dist/` output. Future pushes to `main` run the same deployment automatically.
 
 See [the project handoff](docs/HANDOFF.md) for source-to-screen mapping, award rules, simulation assumptions, and integration boundaries.
 

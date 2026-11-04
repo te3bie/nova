@@ -20,7 +20,7 @@ import { lessons, pathways } from "./data/lessons.js";
 const logoReady = new Promise((resolve) => {
   const image = new Image();
   image.onload = image.onerror = () => resolve();
-  image.src = "/assets/nova-wordmark-white.svg";
+  image.src = `${import.meta.env.BASE_URL}assets/nova-wordmark-white.svg`;
 });
 const nav = [
   ["class", "users", "Class"],
