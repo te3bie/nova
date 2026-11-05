@@ -2,9 +2,9 @@
 
 **Illuminating Your Path to Success.**
 
-## [✦ OPEN NOVA — TRY THE APP →](https://te3bie.github.io/nova-app/)
+## [✦ OPEN NOVA — TRY THE APP →](https://te3bie.github.io/nova/)
 
-*The public link becomes available after the GitHub Pages deployment is enabled.*
+**Public demo hosted on GitHub Pages.**
 
 **Learn the money stuff. Try it for yourself. Build confidence, one small win at a time.**
 
@@ -34,7 +34,7 @@ Whether someone is saving for a first car, thinking about university expenses, o
 
 ### Start as a student
 
-1. **[Open NOVA](https://te3bie.github.io/nova-app/).** Watch the blocks build and tumble, tap to drop one, or select **Skip intro**.
+1. **[Open NOVA](https://te3bie.github.io/nova/).** Watch the blocks build and tumble, tap to drop one, or select **Skip intro**.
 2. On the welcome screen, choose **Find my starting point** for a fresh beginning, or **Explore the student demo** to try a learner with sample progress.
 3. Choose **Learn Independently**, or **Join a Class** using the demo code **NOVA24**. Answer the short introductory quiz to set your goals and starting pathway. You can skip it if you prefer.
 4. From **Home**, choose **Continue Learning** or open a NOVA Pathway. A good first stop is **Types of Investments → Stocks**.
@@ -92,8 +92,8 @@ A production release would need verified opportunity listings, live integrations
 Use Node.js 20.19+ or a recent Node.js 22/24 release.
 
 ```bash
-git clone https://github.com/te3bie/nova-app.git
-cd nova-app
+git clone https://github.com/te3bie/nova.git
+cd nova
 npm ci
 npm run dev
 ```
@@ -114,7 +114,7 @@ The browser tests use an isolated Chrome profile. The last report is available i
 1. Push this repository to GitHub.
 2. Open **Settings → Pages** and set **Source** to **GitHub Actions**.
 3. In **Actions**, run **Deploy NOVA to GitHub Pages** if a deployment has not started automatically.
-4. After the workflow succeeds, open **https://te3bie.github.io/nova-app/**.
+4. After the workflow succeeds, open **https://te3bie.github.io/nova/**.
 
 The workflow builds the app for its repository path and publishes only the `dist/` output. Future pushes to `main` run the same deployment automatically.
 
@@ -124,4 +124,4 @@ See [the project handoff](docs/HANDOFF.md) for source-to-screen mapping, award r
 
 ---
 
-**Ready for your first lightbulb moment? [Open NOVA →](https://te3bie.github.io/nova-app/)**
+**Ready for your first lightbulb moment? [Open NOVA →](https://te3bie.github.io/nova/)**
